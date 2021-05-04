@@ -1,0 +1,66 @@
+//
+//  ViewController.swift
+//  Emojional
+//
+//  Created by Apple on 5/4/21.
+//  Copyright © 2021 Madeline. All rights reserved.
+//
+import UIKit
+
+class ViewController: UIViewController {
+    let emojis = [
+        "🍏" : "Apple Green Emoji",
+        "🍎" : "Apple Red Emoji",
+        "🍐" : "Pear Emoji",
+        "🍔" : "Hamburger Emoji",
+        "🍟" : "Fry Emoji",
+        "🦴" : "Bone Emoji",
+        "🍉" : "Watermelon Emoji",
+        "🧇" : "Waffle Emoji",
+        "🍞" : "Bread Emoji",
+        "🥗" : "Salad Emoji",
+        "🥑" : "Avocado Emoji"
+    ]
+    let custommessages = [
+        "Apple Green Emoji" : "You've Got A Friend In Me. This shows that you're an adventurous and loyal spirit with a big heart!",
+        "Apple Red Emoji" : "Hakuna Matata. This shows that you're a brave and bold person who stops at nohting to protect their friends!",
+        "Pear Emoji" : "Bibbidi Bobbidi Boo. This shows that you are shy and creative, with a taste for the finer things in life!",
+        "Hamburger Emoji" : "See The Light. This shows that you like to stand out from the crowd a little and be unique!",
+        "Fry Emoji" : "Someday My Prince Will Come. This shows that you are sweet and caring person who likes to surround themselves with people they love!",
+        "Bone Emoji" : "Paint With All The Colors In The Wind. This shows that you are a wild chid at heart and love to spend time in nature!",
+        "Watermelon Emoji" : "Tale As Old As Time. This shows that you are a very intelligent and kind spirit who enjoys family time and reading!",
+        "Waffle Emoji" : "One Upon A Dream. This shows that you love to dance and want to live in the forest!",
+        "Bread Emoji" : "Show Yourself. This shows that you're not afraid of a challenge and you can be shy in social situations!",
+        "Salad Emoji" : "In Summer. This shows that you are playful at heart and tend to see the bright side of life!",
+        "Avocado Emoji" : "I Know The Way. This shows that you have a musical spirit and like to sing in the car!"
+        ] as [String : Any]
+
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    @IBAction func showmessage(sender : UIButton) {
+        let selectedemotion = sender.titleLabel?.text
+         let emojimessage = custommessages[emojis[selectedemotion!]!]
+        let alertController = UIAlertController(title: "You Got:", message: "\(emojimessage!)", preferredStyle: UIAlertController.Style.alert)
+        alertController.addAction(UIAlertAction(title :"OK", style : UIAlertAction.Style.default, handler : nil))
+        present(alertController, animated : true, completion : nil)
+    }
+
+    
+}
+
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
