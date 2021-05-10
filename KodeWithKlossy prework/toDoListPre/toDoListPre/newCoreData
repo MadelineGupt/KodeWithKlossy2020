@@ -1,0 +1,18 @@
+
+//  classCoreData.swift
+//  toDoListPre
+//
+//  Created by MADELINE on 5/10/21.
+//  Copyright © 2021 MADELINE. All rights reserved.
+//
+
+import Foundation
+
+import CoreData
+
+@objc(ToDoCD)
+
+
+public class ToDoCD: NSManagedObject {
+
+}
