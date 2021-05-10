@@ -1,0 +1,23 @@
+
+//  toDoCD.swift
+//  toDoListPre
+//
+//  Created by MADELINE on 5/10/21.
+//  Copyright © 2021 MADELINE. All rights reserved.
+//
+
+
+import Foundation
+import CoreData
+
+
+extension ToDoCD {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<ToDoCD> {
+        return NSFetchRequest<ToDoCD>(entityName: "ToDoCD")
+    }
+
+    @NSManaged public var name: String?
+    @NSManaged public var important: Bool
+
+}
